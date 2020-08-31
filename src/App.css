@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-image: linear-gradient(120deg, rgb(137, 226, 226), rgb(57, 112, 214));
+    color: rgb(1, 50, 114);
+    font-family: "Rubik", sans-serif;
+    min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form {
+    min-height: 0vh;
 }
 
-.App-link {
-  color: #61dafb;
+form input {
+    border-radius: 10px 0px 0px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form input,
+form button {
+    padding: 0.5rem;
+    border: none;
+    font-size: 20px;
+}
+
+form button {
+    color: #d88771;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 0px 10px 10px 0px;
+    transition: all 0.8s ease;
+}
+
+form button:hover {
+    color: #fff;
+    background: #d88771;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: #fff;
+    color: #000;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.8s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.delete-btn,
+.complete-btn {
+    color: #ee5034;
+    cursor: pointer;
+    transition: all 0.8s ease;
+    padding: 0.5rem;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.delete-btn {
+    background-color: #eb5050;
+    color: #000;
+}
+
+.delete-btn:hover {
+    background-color: #000;
+    color: #eb5050;
+}
+.complete-btn {
+    color: #000;
+    background-color: #58e458;
+}
+
+.complete-btn:hover {
+    color: #58e458;
+    background-color: #000;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+h4 {
+    position: fixed;
+    bottom: 0;
+    opacity: 50%;
 }
